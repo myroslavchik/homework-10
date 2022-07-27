@@ -125,6 +125,11 @@ $colorgray: #898F8F;
         width: 70px;
         height: 70px;
     }
+
+    @media only screen and (max-width: 280px) {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .main-list .borders::before {
@@ -141,6 +146,10 @@ $colorgray: #898F8F;
     @media only screen and (min-width: 930px) {
         width: 70px;
         height: 70px;
+    }
+    @media only screen and (max-width: 280px) {
+        width: 30px;
+        height: 30px;
     }
 
 

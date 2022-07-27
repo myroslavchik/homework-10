@@ -129,6 +129,12 @@
     height: 70px;
   }
 }
+@media only screen and (max-width: 280px) {
+  .main-list .borders::after {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 .main-list .borders::before {
   display: block;
@@ -145,6 +151,12 @@
   .main-list .borders::before {
     width: 70px;
     height: 70px;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .main-list .borders::before {
+    width: 30px;
+    height: 30px;
   }
 }
 
