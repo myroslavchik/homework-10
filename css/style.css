@@ -105,61 +105,35 @@
     margin-bottom: 70px;
   }
 }
-.main-list .borders {
-  margin: 0 15px;
-  position: relative;
-  max-width: 400px;
-  max-height: 400px;
+/*BORDERS HERO*/
+.borders {
+  --b:1.5px; /* thickness of the border */
+  --c:#FFCC00; /* color of the border */
+  --w:100px; /* width of border */
+  border: var(--b) solid transparent; /* space for the border */
+  background: linear-gradient(var(--c), var(--c)) top left, linear-gradient(var(--c), var(--c)) top left, linear-gradient(var(--c), var(--c)) bottom left, linear-gradient(var(--c), var(--c)) bottom left, linear-gradient(var(--c), var(--c)) top right, linear-gradient(var(--c), var(--c)) top right, linear-gradient(var(--c), var(--c)) bottom right, linear-gradient(var(--c), var(--c)) bottom right;
+  background-size: var(--b) var(--w), var(--w) var(--b);
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  /*Irrelevant code*/
+  width: 420px;
+  height: 420px;
+  box-sizing: border-box;
+  margin: 5px;
+  display: inline-flex;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  line-height: 90px;
 }
-
-.main-list .borders::after {
-  display: block;
-  content: "";
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  border-top: 2px solid #FFCC00;
-  border-right: 2px solid #FFCC00;
-}
-@media only screen and (min-width: 930px) {
-  .main-list .borders::after {
-    width: 70px;
-    height: 70px;
-  }
-}
-@media only screen and (max-width: 280px) {
-  .main-list .borders::after {
-    width: 30px;
-    height: 30px;
+@media only screen and (max-width: 560px) {
+  .borders {
+    --w:50px;
+    height: 100%;
   }
 }
 
-.main-list .borders::before {
-  display: block;
-  content: "";
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  bottom: -15px;
-  left: -15px;
-  border-bottom: 2px solid #FFCC00;
-  border-left: 2px solid #FFCC00;
-}
-@media only screen and (min-width: 930px) {
-  .main-list .borders::before {
-    width: 70px;
-    height: 70px;
-  }
-}
-@media only screen and (max-width: 280px) {
-  .main-list .borders::before {
-    width: 30px;
-    height: 30px;
-  }
-}
-
+/*BORDERS HERO*/
 .main-list .hero {
   display: flex;
   justify-content: center;
@@ -170,7 +144,7 @@
     position: relative;
     display: inline-block;
     width: 50%;
-    border-right: 2px solid #FFCC00;
+    border-right: 1.5px solid #FFCC00;
   }
 }
 
@@ -178,6 +152,7 @@
   width: 100%;
   height: auto;
   max-width: 400px;
+  padding: 10px;
 }
 @media only screen and (min-width: 930px) {
   .main-list .hero img {
