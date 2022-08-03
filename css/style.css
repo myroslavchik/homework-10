@@ -304,9 +304,14 @@
   cursor: pointer;
 }
 
+.img::before {
+  content: url(/img/decore.png);
+  display: flex;
+}
+
 button:hover {
   background-color: #FFCC00;
-  border: solid 2px #FFCC00;
+  border: solid 1px #FFCC00;
   transition: border-width 0.1s linear;
 }
 

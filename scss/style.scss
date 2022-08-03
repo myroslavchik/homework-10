@@ -104,13 +104,11 @@ $colorgray: #898F8F;
 }
 
 /*BORDERS HERO*/
-
 .borders {
     --b:1.5px;   /* thickness of the border */
     --c:#FFCC00;   /* color of the border */
     --w:100px;  /* width of border */
     
-  
     border:var(--b) solid transparent; /* space for the border */
     background:
       linear-gradient(var(--c),var(--c)) top left,
@@ -135,14 +133,11 @@ $colorgray: #898F8F;
     justify-content:center;
     align-items:center;
     line-height:90px;
-
     @media only screen and (max-width: 560px) {
         --w:50px;
        height: 100%;
 }
 }
-
-
 /*BORDERS HERO*/
 
 .main-list .hero {
@@ -308,11 +303,17 @@ $colorgray: #898F8F;
     cursor: pointer;
 }
 
+.img::before {
+    content: url(/img/decore.png);
+    display: flex;
+}
+
 button:hover {
     background-color: $colorgold;
-    border: solid 2px $colorgold;
+    border: solid 1px $colorgold;
     transition: border-width 0.1s linear;
 }
+
 
 
 
