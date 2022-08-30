@@ -1,3 +1,5 @@
+/*review*/
+
 $colorgold: #FFCC00;
 $colorgray: #898F8F;
 
@@ -101,48 +103,42 @@ $colorgray: #898F8F;
     }
 }
 
-.main-list .borders {
-    margin: 0 15px;
-    position: relative;
-    max-width: 400px;
-    max-height: 400px;
+/*BORDERS HERO*/
+.borders {
+    --b:1.5px;   /* thickness of the border */
+    --c:#FFCC00;   /* color of the border */
+    --w:100px;  /* width of border */
+    
+    border:var(--b) solid transparent; /* space for the border */
+    background:
+      linear-gradient(var(--c),var(--c)) top left,
+      linear-gradient(var(--c),var(--c)) top left,
+      linear-gradient(var(--c),var(--c)) bottom left,
+      linear-gradient(var(--c),var(--c)) bottom left,
+      linear-gradient(var(--c),var(--c)) top right,
+      linear-gradient(var(--c),var(--c)) top right,
+      linear-gradient(var(--c),var(--c)) bottom right,
+      linear-gradient(var(--c),var(--c)) bottom right;
+    background-size:var(--b) var(--w),var(--w) var(--b);
+    background-origin:border-box;
+    background-repeat:no-repeat;
+    
+    /*Irrelevant code*/  
+    width:420px;
+    height:420px;
+    box-sizing:border-box;
+    margin:5px;
+    display:inline-flex;
+    font-size:30px;
+    justify-content:center;
+    align-items:center;
+    line-height:90px;
+    @media only screen and (max-width: 560px) {
+        --w:50px;
+       height: 100%;
 }
-
-.main-list .borders::after {
-    display: block;
-    content: "";
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    border-top: 2px solid $colorgold;
-    border-right: 2px solid $colorgold;
-
-    @media only screen and (min-width: 930px) {
-        width: 70px;
-        height: 70px;
-    }
 }
-
-.main-list .borders::before {
-    display: block;
-    content: "";
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    bottom: -15px;
-    left: -15px;
-    border-bottom: 2px solid $colorgold;
-    border-left: 2px solid $colorgold;
-
-    @media only screen and (min-width: 930px) {
-        width: 70px;
-        height: 70px;
-    }
-
-
-}
+/*BORDERS HERO*/
 
 .main-list .hero {
         display: flex;
@@ -153,7 +149,7 @@ $colorgray: #898F8F;
             position: relative;
             display: inline-block;
             width: 50%;
-            border-right: 2px solid $colorgold;
+            border-right: 1.5px solid $colorgold;
         }
 }
 
@@ -161,6 +157,7 @@ $colorgray: #898F8F;
     width: 100%;
     height: auto;
     max-width: 400px;
+    padding: 10px;
 
     @media only screen and (min-width: 930px) {
         min-width: 400px;
@@ -306,11 +303,17 @@ $colorgray: #898F8F;
     cursor: pointer;
 }
 
+.img::before {
+    content: url(/img/decore.png);
+    display: flex;
+}
+
 button:hover {
     background-color: $colorgold;
-    border: solid 2px $colorgold;
+    border: solid 1px $colorgold;
     transition: border-width 0.1s linear;
 }
+
 
 
 
